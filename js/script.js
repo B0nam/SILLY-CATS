@@ -5,7 +5,8 @@ function specialFunction()
 
 let lastImage = 0;
 
-function reloadFunction() {
+function reloadFunction()
+{
     let actualImage = document.getElementById("catImage");
     let randomImgNumber;
 
@@ -29,12 +30,17 @@ function reloadFunction() {
 
 document.addEventListener("DOMContentLoaded", function ()
 {
+    var audio = document.getElementById("meew");
+
     var image = document.getElementById("catImage");
     var isDragging = false;
     var initialX, initialY;
     var originalX, originalY;
     
-    image.addEventListener("mousedown", function (e) {
+    image.addEventListener("mousedown", function (e)
+    {
+        audio.play();
+
         e.preventDefault();
         isDragging = true;
         image.style.cursor = "grabbing";
@@ -45,7 +51,8 @@ document.addEventListener("DOMContentLoaded", function ()
         originalY = parseInt(image.style.top || 0, 10);
     });
     
-    document.addEventListener("mousemove", function (e) {
+    document.addEventListener("mousemove", function (e)
+    {
         if (isDragging) {
             let newX = e.clientX - initialX;
             let newY = e.clientY - initialY;
@@ -54,7 +61,8 @@ document.addEventListener("DOMContentLoaded", function ()
         }
     });
     
-    document.addEventListener("mouseup", function () {
+    document.addEventListener("mouseup", function ()
+    {
         isDragging = false;
         image.style.cursor = "grab";
 
