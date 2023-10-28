@@ -27,8 +27,10 @@
     </section>
     <section class="section-action">
         <div class="conteiner-button">
-            <button class="button-action" onclick="specialFunction()" role="button"><span class="material-symbols-rounded">star_rate</span></button>
-            <button class="button-action" onclick="reloadFunction()" role="button"><span class="material-symbols-rounded">refresh</span></button>
+            <audio id="ploc" src="assets/ploc.mp3"></audio>
+            <audio id="music" src="assets/songs/none.mp3"></audio>
+            <button class="button-action" onclick="playPloc(), specialFunction()" role="button"><span class="material-symbols-rounded">star_rate</span></button>
+            <button class="button-action" onclick="playPloc(), reloadFunction(), rotateImage()" role="button"><span class="material-symbols-rounded">refresh</span></button>
         </div>
     </section>
 </body>

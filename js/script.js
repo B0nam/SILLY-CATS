@@ -1,9 +1,33 @@
-function specialFunction()
-{
+let specialPlaying = false;
+let lastImage = 0;
 
+function playPloc()
+{
+    var audio = document.getElementById("ploc");
+    audio.play();
 }
 
-let lastImage = 0;
+function specialFunction()
+{
+    allMyFellas();
+
+    function allMyFellas()
+    {
+        var audio = document.getElementById("music");
+        audio.setAttribute("src", "assets/songs/allmyfellas.mp3");
+        audio.play();
+    }
+
+    function initialD()
+    {
+
+    }
+
+    function fatRatOutro()
+    {
+
+    }
+}
 
 function reloadFunction()
 {
@@ -27,6 +51,16 @@ function reloadFunction()
     actualImage.setAttribute("src", nextImage);
 }
 
+function rotateImage()
+{
+    var image = document.getElementById("catImage");
+    image.classList.add("rotate-center");
+
+    setTimeout(function()
+    {
+        image.classList.remove("rotate-center");
+    }, 500);
+}
 
 document.addEventListener("DOMContentLoaded", function ()
 {
